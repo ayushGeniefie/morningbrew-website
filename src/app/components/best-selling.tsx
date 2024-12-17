@@ -3,70 +3,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
-import CarouselProduct from "./carouselProduct";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Description } from "@radix-ui/react-toast";
 
-// const products = [
-//   {
-//     id: 1,
-
-//     name: "Coffee Strong",
-//     image: "/assets/50gmSilver.png?height=400&width=400",
-//   },
-//   {
-//     id: 2,
-
-//     name: "Extra Bold",
-//     image: "/assets/100gmCopper.png?height=400&width=400",
-//   },
-//   {
-//     id: 3,
-//     name: "Premium",
-//     image: "/assets/2GmGold.png?height=400&width=400",
-//   },
-//   {
-//     id: 4,
-//     name: "Coffee Strong",
-//     image: "/assets/2GmSilver.png?height=400&width=400",
-//   },
-//   {
-//     id: 5,
-//     name: "Extra Bold",
-//     image: "/assets/2GmCopper.png?height=300&width=300",
-//   },
-//   {
-//     id: 6,
-//     name: "Premium",
-//     image: "/assets/50gmGold.png?height=400&width=400",
-//   },
-//   {
-//     id: 7,
-//     name: "Extra Bold",
-//     image: "/assets/50gmCopper.png?height=300&width=300",
-//   },
-//   {
-//     id: 8,
-//     name: "Premium",
-//     image: "/assets/100gmGold.png?height=400&width=400",
-//   },
-//   {
-//     id: 9,
-//     name: "Coffee Strong",
-//     image: "/assets/100gmSilver.png?height=400&width=400",
-//   },
-//   {
-//     id: 10,
-//     name: "Premium",
-//     image: "/assets/100gmGold.png?height=400&width=400",
-//   },
-//   {
-//     id: 11,
-//     name: "Extra Bold",
-//     image: "/assets/100copper.png?height=400&width=400",
-//   },
-// ];
 const products = [
   {
     id: 1,
@@ -75,7 +13,7 @@ const products = [
     description:
       "Taste Premium ,Smell Local! Experience the rich flavor of our instant Pure Granulated Coffee,crafted from the finest beans,handpicked from renowned Indian coffee regions.Every cup delivers exceptional quality.Enjoy coffee in its purrst form ",
     quantity: [
-      { label: "2gm", images: "/assets/2GmGold.png" },
+      { label: "1.1gm", images: "/assets/2GmGold.png" },
       { label: "50gm", images: "/assets/50gmGold.png" },
       { label: "100gm", images: "/assets/100gmGold.png" },
     ],
@@ -87,7 +25,7 @@ const products = [
     description:
       "Wake Up to a Chicory Twist! Rich, Strong , and infused with Chicory Goodness,Try our Instant Strong Chicory Coffee for a robust, well-balanced brew.This instant coffee has a sophisticated flavor that is healthy and smooth ,thanks to the natural richness of chicory",
     quantity: [
-      { label: "2gm", images: "/assets/2GmSilver.png" },
+      { label: "1.1gm", images: "/assets/2GmSilver.png" },
       { label: "50gm", images: "/assets/50gmSilver.png" },
       { label: "100gm", images: "/assets/100gmSilver.png" },
     ],
@@ -99,7 +37,7 @@ const products = [
     description:
       "A rich and bold mix of coffee and chicory that delivers adeep,satisfying strength. Expertly designed for those who seek apowerful,full-bodied coffee experience. Embrace instant boldness with every sip.",
     quantity: [
-      { label: "2gm", images: "/assets/2Gmcopper.png" },
+      { label: "1.1gm", images: "/assets/2Gmcopper.png" },
       { label: "50gm", images: "/assets/50gmCopper.png" },
       { label: "100gm", images: "/assets/100gmCopper.png" },
     ],
