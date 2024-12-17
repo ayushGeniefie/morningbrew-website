@@ -61,10 +61,8 @@ export default function ProductDetail({ product }: any) {
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back
         </Link>
-
         {/* Categories */}
         <div className="flex items-center gap-4 mb-12"></div>
-
         {/* Product Info */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="max-w-md">
@@ -99,7 +97,6 @@ export default function ProductDetail({ product }: any) {
             />
           </div>
         </div>
-
         {/* Pill Count Selection */}
         {/* <div className="flex justify-end gap-4 mt-8">
           {[30, 60, 90].map((count) => (
@@ -124,9 +121,8 @@ export default function ProductDetail({ product }: any) {
             <Info className="w-5 h-5" />
           </Button>
         </div> */}
-
         {/* Purchase Section */}
-        <div className="fixed bottom-0 left-0 right-0 bg-[#342b27] backdrop-blur-lg">
+        {/* <div className="fixed bottom-0 left-0 right-0 bg-[#342b27] backdrop-blur-lg">
           <div className="container mx-auto px-6 py-4 flex items-center justify-between">
             <div className="flex items-center gap-8">
               <span className="text-3xl font-bold">
@@ -150,8 +146,56 @@ export default function ProductDetail({ product }: any) {
                 >
                   <Plus className="w-4 h-4" />
                 </Button>
+                {selectedProduct.Price === 100 && <p>(50 pieces / pack)</p>}
               </div>
             </div>
+            <Button
+              onClick={() => addToCart(product)}
+              className="bg-white text-[#8B1538] hover:bg-white/90"
+            >
+              <ShoppingCart className="w-4 h-4 mr-2" />
+              Buy Now
+            </Button>
+          </div>
+        </div> */}
+        {/* // Inside the Purchase Section */}
+        <div className="fixed bottom-0 left-0 right-0 bg-[#342b27] backdrop-blur-lg">
+          <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+            <div className="flex items-center gap-8">
+              {/* Display the total price dynamically */}
+              <span className="text-3xl font-bold">
+                &#8377;{selectedProduct.Price * quantity}
+              </span>
+              <div className="flex items-center gap-4">
+                {/* Decrease Quantity */}
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="text-white hover:text-white/80"
+                  onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                >
+                  <Minus className="w-4 h-4" />
+                </Button>
+
+                {/* Show Current Quantity */}
+                <span className="text-xl w-8 text-center">{quantity}</span>
+
+                {/* Increase Quantity */}
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="text-white hover:text-white/80"
+                  onClick={() => setQuantity(quantity + 1)}
+                >
+                  <Plus className="w-4 h-4" />
+                </Button>
+
+                {/* Optional: Show info for specific price */}
+                {selectedProduct.Price === 100 && <p>(50 pieces / pack)</p>}
+              </div>
+            </div>
+
+            {/* Buy Now Button */}
             <Button
               onClick={() => addToCart(product)}
               className="bg-white text-[#8B1538] hover:bg-white/90"

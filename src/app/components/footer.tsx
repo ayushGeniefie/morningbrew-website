@@ -15,8 +15,8 @@ export default function Footer() {
           <div>
             <h4 className="text-xl font-semibold mb-4">Contact Us</h4>
             <div className="space-y-2 text-gray-400">
-              <p>Info@Koffelo.Com</p>
-              <p>Call Us: (+91) 931-033-3433</p>
+              <p>info@morningbrew.Com</p>
+              <p>Call Us: (+91) 966-794-6833</p>
               <p>Urbtech Trade Centre,IS 16,1601,First Floor Sector 132,</p>
               <p>Gautam Buddha Nagar,Noida 201301,U.P.</p>
             </div>
