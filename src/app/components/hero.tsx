@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <div className="relative h-[600px] bg-[#1a1a1a] text-white overflow-hidden">
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent z-10" />
+        <div className="absolute inset-0  z-10" />
         <Image
           src="/assets/Banner.jpg"
           alt="Coffee splash"
