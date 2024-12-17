@@ -1,9 +1,15 @@
-import Image from 'next/image'
-import { Coffee } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import Image from "next/image";
+import { Coffee } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
-export default function ProductCard({ product, onSelect }) {
+export default function ProductCard({ product, onSelect }: any) {
   return (
     <Card className="flex flex-col justify-between">
       <CardHeader>
@@ -31,6 +37,5 @@ export default function ProductCard({ product, onSelect }) {
         </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }
-

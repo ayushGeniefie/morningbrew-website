@@ -1,8 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { Star } from "lucide-react";
 
 const testimonials = [
   {
@@ -16,7 +14,7 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const currentTestimonial = 0;
 
   return (
     <div className="bg-[#f5e6d3] py-16">

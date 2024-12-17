@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
-import { Playfair_Display } from "next/font/google";
+
 import "./globals.css";
 import localFont from "next/font/local";
 
 const circeRoundRegular = localFont({
   src: "./fonts/CirceRounded-Regular.otf",
 });
-
-const playfair = Playfair_Display({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Caffeine - Discover The Art of Perfect Coffee",

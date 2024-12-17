@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
 import { useRouter } from "next/navigation";
@@ -49,8 +48,6 @@ const products = [
 export default function BestSelling() {
   const route = useRouter();
 
-  const [activeCategory, setActiveCategory] = useState("All");
-
   return (
     <div className="bg-[#f5e6d3] py-16">
       <div className="container mx-auto px-4">
@@ -94,7 +91,7 @@ export default function BestSelling() {
         </h2>
         <div className="w-full   gap-5">
           <div className="grid grid-cols-3 gap-4">
-            {products.map((product, index) => (
+            {products.map((product) => (
               <div
                 onClick={() => {
                   route.push(`/product/${product.id}`);

@@ -1,16 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowLeft, ShoppingCart, User, Minus, Plus, Info } from "lucide-react";
+import { ArrowLeft, ShoppingCart, Minus, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Image from "next/image";
+
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 
 export default function ProductDetail({ product }: any) {
   const [quantity, setQuantity] = useState(1);
-  const [selectedCount, setSelectedCount] = useState(30);
+
   const [cartItem, setCartItem] = useState<any>([]);
   const [selectedProduct, setSelectedProduct] = useState<any>(null);
 
