@@ -10,16 +10,15 @@ import { cn } from "@/lib/utils";
 
 export default function ProductDetail({ product }: any) {
   const [quantity, setQuantity] = useState(1);
-
   const [cartItem, setCartItem] = useState<any>([]);
-  const [selectedProduct, setSelectedProduct] = useState<any>(null);
+  const [selectedProduct, setSelectedProduct] = useState<any>(product);
 
   const addToCart = (product: any) => {
     setCartItem((prev: any) => {
       return [...prev, { ...product, quantity: quantity }];
     });
   };
-  console.log(selectedProduct?.image, "dc");
+  console.log(selectedProduct, "wjkh");
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#342b27] to-[#6d5043] text-white relative overflow-hidden">
       {/* Background decoration */}
@@ -130,7 +129,9 @@ export default function ProductDetail({ product }: any) {
         <div className="fixed bottom-0 left-0 right-0 bg-[#342b27] backdrop-blur-lg">
           <div className="container mx-auto px-6 py-4 flex items-center justify-between">
             <div className="flex items-center gap-8">
-              <span className="text-3xl font-bold">$25.50</span>
+              <span className="text-3xl font-bold">
+                &#8377;{selectedProduct.Price}
+              </span>
               <div className="flex items-center gap-4">
                 <Button
                   variant="ghost"
